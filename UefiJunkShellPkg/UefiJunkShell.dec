@@ -1,0 +1,5 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = UefiJunkShellPkg
+  PACKAGE_GUID                   = f9f96d72-3978-43dc-9959-7075ff1e151e
+  PACKAGE_VERSION                = 0.1

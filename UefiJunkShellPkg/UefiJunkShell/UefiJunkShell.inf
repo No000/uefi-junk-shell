@@ -1,0 +1,31 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = UefiJunkShell
+  FILE_GUID                      = e740840e-0f58-4b26-9add-950de7fa8bde
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+    shell/shell.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiApplicationEntryPoint
+  RegisterFilterLib
+
+[Guids]
+  gEfiFileInfoGuid
+  gEfiAcpiTableGuid
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiLoadFileProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiBlockIoProtocolGuid
+
+[BuildOptions]
+  *_*_X64_CC_FLAGS = -fms-extensions
